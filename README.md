@@ -16,7 +16,11 @@ Follow standard Redmine plugin installation -- (barely) modified from http://www
 
    e.g. rake redmine:plugins:migrate RAILS_ENV=production
 
-3. Restart Redmine (or web server)
+3. Load seed data
+
+   rake redmine:project_priority:seed RAILS_ENV=production
+
+4. Restart Redmine (or web server)
 
 You should now be able to see the plugin list in Administration -> Plugins.
      
