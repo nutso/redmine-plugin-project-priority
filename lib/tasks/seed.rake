@@ -2,7 +2,7 @@ desc <<-END_DESC
 Seed project priority data
 
 Example:
-  rake redmine:project_priority:seed RAILS_ENV="production"
+  rake redmine:project_priority:seed RAILS_ENV=production
 END_DESC
 require File.expand_path(File.dirname(__FILE__) + "/../../../../config/environment")
 
