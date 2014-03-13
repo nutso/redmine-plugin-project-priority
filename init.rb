@@ -1,3 +1,5 @@
+require 'redmine'
+
 # view hooks
 require_dependency 'redmine_project_priority/hooks'
 
