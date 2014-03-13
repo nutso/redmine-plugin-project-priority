@@ -9,9 +9,6 @@ require File.expand_path(File.dirname(__FILE__) + "/../../../../config/environme
 namespace :redmine do
   namespace :project_priority do
     task :seed => :environment do
-      puts "loading an issue priority"
-      i = IssuePriority.new
-      
       puts "Seeding initial project priority values."
       # Same default values as for IssuePriority
       ProjectPriority.create!(:name => l(:default_priority_low), :position => 1)
