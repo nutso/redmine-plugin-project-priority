@@ -1,6 +1,6 @@
 # Adapted almost verbatim from IssuePriority
 class ProjectPriority < Enumeration
-  has_many :projects, :foreign_key => 'priority_id'
+  has_many :projects, :foreign_key => 'project_priority_id'
   
   after_destroy {|priority| priority.class.compute_position_names}
   after_save {|priority| priority.class.compute_position_names if priority.position_changed? && priority.position}
