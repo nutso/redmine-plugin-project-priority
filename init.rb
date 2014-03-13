@@ -1,3 +1,6 @@
+# view hooks
+require_dependency 'redmine_project_priority/hooks'
+
 Redmine::Plugin.register :project_priority do
   name 'Project Priority'
   author 'Teresa N.'
@@ -9,9 +12,5 @@ end
 
 
 # TODO
-# project form hook -- :view_projects_form
-# show project hooks -- :view_projects_show_left
-#                       :view_projects_show_right
-#                       :view_projects_show_sidebar_bottom
 # views/projects/index.api.rsb -- include the priority
 # views/projects/show.api.rsb -- include the priority
