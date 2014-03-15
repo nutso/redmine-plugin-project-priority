@@ -1,0 +1,3 @@
+<% if @project.safe_attribute? 'priority_id' %>
+<p><%= f.select :priority_id, (@project_priorities.collect {|p| [p.name, p.id]}), {:required => true} %></p>
+<% end %>

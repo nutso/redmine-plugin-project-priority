@@ -1,8 +1,10 @@
 require 'redmine'
+
+# models
 require 'projects_patch'
-
-
-# view hooks
+# controllers
+require 'projects_controller_patch'
+# views
 require_dependency 'redmine_project_priority/hooks'
 
 Redmine::Plugin.register :project_priority do
@@ -17,10 +19,6 @@ Redmine::Plugin.register :project_priority do
   # Send patches to models and controllers
   Rails.configuration.to_prepare do
     Project.send(:include, RedmineProjectPriority::ProjectPatch)
+    ProjectController.send(:include, RedmineProjectPriority::ProjectControllerPatch)
   end  
 end
-
-
-# TODO
-# views/projects/index.api.rsb -- include the priority
-# views/projects/show.api.rsb -- include the priority
