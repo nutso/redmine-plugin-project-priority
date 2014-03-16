@@ -19,6 +19,6 @@ Redmine::Plugin.register :project_priority do
   # Send patches to models and controllers
   Rails.configuration.to_prepare do
     Project.send(:include, RedmineProjectPriority::ProjectPatch)
-    ProjectController.send(:include, RedmineProjectPriority::ProjectControllerPatch)
+    ProjectsController.send(:include, RedmineProjectPriority::ProjectControllerPatch)
   end  
 end
