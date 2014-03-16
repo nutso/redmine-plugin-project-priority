@@ -1,5 +1,5 @@
 module RedmineProjectPriority
-  module ProjectControllerPatch
+  module ProjectsControllerPatch
     def self.included(base)
       base.class_eval do
         # No project controller hooks exist
