@@ -3,9 +3,10 @@ module RedmineProjectPriority
     def self.included(base)
       base.class_eval do
         # No project controller hooks exist
-        before_filter :set_project_priorities, :only => [ :new, :create, :edit, :update ]
+        before_filter :set_project_priorities, :only => [ :new, :create, :edit, :update, :settings ]
         
         def set_project_priorities
+          Rails.logger.info "setting priorities"
           @project_priorities = ProjectPriority.active
         end
                 
