@@ -2,7 +2,7 @@ module RedmineProjectPriority
   module IssueQueryPatch
     def self.included(base)
       def initialize_available_filters_with_project_priority_filter
-        reval = initialize_available_filters_without_project_priority_filter
+        retval = initialize_available_filters_without_project_priority_filter
         add_available_filter "project_priority_id", :type => :list, :values => ProjectPriority.all.collect{|s| [s.name, s.id.to_s] }
         retval
       end
