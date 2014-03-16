@@ -6,8 +6,7 @@ module RedmineProjectPriority
         before_filter :set_project_priorities, :only => [ :new, :create, :edit, :update, :settings ]
         
         def set_project_priorities
-          Rails.logger.info "setting priorities"
-          @project_priorities = ProjectPriority.active
+         @project_priorities = ProjectPriority.active
         end
                 
       end # base.class_eval
