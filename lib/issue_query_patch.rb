@@ -1,3 +1,5 @@
+require 'redmine'
+
 module RedmineProjectPriority
   module IssueQueryPatch
     def self.included(base)
@@ -18,7 +20,7 @@ module RedmineProjectPriority
 end # recurring task
 
 
-class QueryAssociationColumn < Query Column
+class QueryAssociationColumn < QueryColumn
   def initialize(name, options)
     super(name, options)
     
