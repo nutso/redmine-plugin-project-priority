@@ -10,8 +10,7 @@
 
 ## Next Version (Develop Branch)
 
-* Initial plugin functionality
-* 
+* Initial plugin functionality - add/edit/show project priority
 
 ## Version 0.0.1 (13 Mar 2014)
 
