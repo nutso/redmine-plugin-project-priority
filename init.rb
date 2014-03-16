@@ -1,7 +1,9 @@
 require 'redmine'
 
 # models
-require 'projects_patch'
+require 'project_patch'
+require 'issue_patch'
+require 'issue_query_patch'
 # controllers
 require 'projects_controller_patch'
 # views
@@ -19,6 +21,9 @@ Redmine::Plugin.register :project_priority do
   # Send patches to models and controllers
   Rails.configuration.to_prepare do
     Project.send(:include, RedmineProjectPriority::ProjectPatch)
-    ProjectsController.send(:include, RedmineProjectPriority::ProjectControllerPatch)
+    ProjectsController.send(:include, RedmineProjectPriority::ProjectsControllerPatch)
+    
+    Issue.send(:include, RedmineProjectPriority::IssuePatch)
+    IssueQuery.send(:include, RedmineProjectPriority::IssueQueryPatch)
   end  
 end
