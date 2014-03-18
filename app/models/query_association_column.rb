@@ -9,6 +9,8 @@ class QueryAssociationColumn < QueryColumn
     def value(object)
       if name == 'project_priority_id'
         return ProjectPriority.find((object.send @association).send @field).to_s
+      else
+        return "UNKNOWN -- #{name}"
       end
     end
     
