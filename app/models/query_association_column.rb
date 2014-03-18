@@ -8,7 +8,8 @@ class QueryAssociationColumn < QueryColumn
     # TODO not sure if this is necessary (or functional)
     def value(object)
       if name == 'project.project_priority_id'
-        return ProjectPriority.find((object.send @association).send @field).to_s
+        id = (object.send @association).send @field
+        return (id.nil? ? super(object) : ProjectPriority.find(id).to_s)
       else
         return "UNKNOWN -- #{name}"
       end
