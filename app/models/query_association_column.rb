@@ -6,9 +6,9 @@ class QueryAssociationColumn < QueryColumn
     @field = options[:field]
     
     # TODO not sure if this is necessary (or functional)
-    # def value(object)
-    #   (object.send @association).send @field
-    # end
+    def value(object)
+      (object.send @association).send @field
+    end
     
     # TODO set self.groupable = association.column
   end
