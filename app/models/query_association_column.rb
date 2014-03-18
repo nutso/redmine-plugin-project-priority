@@ -7,7 +7,9 @@ class QueryAssociationColumn < QueryColumn
     
     # TODO not sure if this is necessary (or functional)
     def value(object)
-      (object.send @association).send @field
+      if name == 'project_priority_id'
+        ProjectPriority.find((object.send @association).send @field)
+      end
     end
     
     # TODO set self.groupable = association.column
