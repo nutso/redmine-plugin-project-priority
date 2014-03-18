@@ -4,6 +4,7 @@ require 'redmine'
 require 'project_patch'
 require 'issue_patch'
 require 'issue_query_patch'
+require 'query_patch'
 # controllers
 require 'projects_controller_patch'
 # views
@@ -25,5 +26,7 @@ Redmine::Plugin.register :project_priority do
     
     Issue.send(:include, RedmineProjectPriority::IssuePatch)
     IssueQuery.send(:include, RedmineProjectPriority::IssueQueryPatch)
+    
+    Query.send(:include, RedmineProjectPriority::QueryPatch)
   end  
 end
