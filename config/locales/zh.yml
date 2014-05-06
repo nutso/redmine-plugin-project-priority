@@ -1,0 +1,4 @@
+# Chinese strings go here for Rails i18n
+zh:
+  field_project_priority: "优先级"
+  label_project_priority: "项目优先级"
