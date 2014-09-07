@@ -1,8 +1,13 @@
 # redmine-plugin-project-priority
 
+~~ This plugin is *not* ready for prime-time yet. Feedback/testing/contributions always welcome! ~~
+ 
+
 Redmine plugin that adds a priority field to projects, similar to issues, that can be used to rank and sort issues as well as projects.
 
 Released under GPLv2 in accordance with Redmine licensing.
+
+## Features
 
 ## Installation
 
