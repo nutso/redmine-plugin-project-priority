@@ -17,5 +17,5 @@ module RedmineProjectPriority
           'project_priority_id'
       end # base.class_eval
     end # self.included
-  end # issues patch
-end # recurring task
+  end # project patch
+end # project priority

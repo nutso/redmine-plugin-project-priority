@@ -1,5 +1,5 @@
 module RedmineProjectPriority
-  module ProjectControllerPatch
+  module ProjectsControllerPatch
     def self.included(base)
       base.class_eval do
         # No project controller hooks exist
@@ -11,5 +11,5 @@ module RedmineProjectPriority
                 
       end # base.class_eval
     end # self.included
-  end # issues patch
-end # recurring task
+  end # project controller patch
+end # project priority
