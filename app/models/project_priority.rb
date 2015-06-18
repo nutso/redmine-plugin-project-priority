@@ -45,7 +45,8 @@ class ProjectPriority < Enumeration
             index == (priorities.size - 1) ? "highest" : "high#{priorities.size - index}"
           end
 
-        update_all({:position_name => name}, :id => priority.id)
+        where(:id => priority.id).update_all({:position_name => name})
+        # update_all({:position_name => name}, :id => priority.id)
       end
     end
   end
