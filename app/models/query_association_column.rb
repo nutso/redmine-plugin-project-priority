@@ -7,7 +7,8 @@ class QueryAssociationColumn < QueryColumn
     
     # TODO not sure if this is necessary (or functional)
     def value(object)
-      if name == 'project.project_priority_id'
+      # TODO split on __ for table and field
+      if name == 'project__project_priority_id'
         id = (object.send @association).send @field
         return (id.nil? ? super(object) : ProjectPriority.find(id).to_s)
       else
@@ -19,6 +20,6 @@ class QueryAssociationColumn < QueryColumn
   end
   
   def name
-    "#{@association}.#{@field}"
+    "#{@association}__#{@field}"
   end
 end
