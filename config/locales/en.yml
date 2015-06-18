@@ -2,3 +2,4 @@
 en:
   field_project_priority: "Priority"
   label_project_priority: "Project Priority"
+  enumeration_project_priorities: "Project priorities"
