@@ -1,6 +1,8 @@
 # redmine-plugin-project-priority
 
-Redmine plugin that adds a priority field to projects, similar to issues, that can be used to filter issues.
+Redmine plugin that adds a priority field to projects, similar to issues, that can be used to filter and group issue lists.
+
+Supports Redmine 2.x
 
 Released under GPLv2 in accordance with Redmine licensing.
 
