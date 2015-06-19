@@ -4,6 +4,10 @@
 
 See GitHub issues at https://github.com/nutso/redmine-plugin-project-priority/
 
+## Version 0.0.4 (Unreleased)
+
+* 
+
 ## Version 0.0.3 (18 Jun 2015)
 
 * Error when seeding initial project priority values ([#3](https://github.com/nutso/redmine-plugin-project-priority/issues/3))
