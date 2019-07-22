@@ -12,21 +12,21 @@ require_dependency 'redmine_project_priority/hooks'
 
 Redmine::Plugin.register :project_priority do
   name 'Project Priority'
-  author 'Teresa N.'
+  author 'Peter Du && Teresa N.'
   author_url 'https://github.com/nutso/'
-  url 'https://github.com/nutso/redmine-plugin-project-priority'
+  url 'https://github.com/fzbtech/redmine-plugin-project-priority'
   description 'Adds a priority field to projects, similar to issues, that can be used to rank and sort issues as well as projects.'
-  version '0.0.4-pre'
-  
-  
+  version '0.1.3'
+
+
   # Send patches to models and controllers
   Rails.configuration.to_prepare do
     Project.send(:include, RedmineProjectPriority::ProjectPatch)
     ProjectsController.send(:include, RedmineProjectPriority::ProjectsControllerPatch)
-    
+
     Issue.send(:include, RedmineProjectPriority::IssuePatch)
     IssueQuery.send(:include, RedmineProjectPriority::IssueQueryPatch)
-    
+
     Query.send(:include, RedmineProjectPriority::QueryPatch)
-  end  
+  end
 end
